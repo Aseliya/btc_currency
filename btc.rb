@@ -15,11 +15,11 @@ loop do
   file = File. open('btc_log.txt', 'a')
   if array.size >= 2
     if array[-1] == array[-2]
-      file.puts parsed_response + '='
+      file.puts "#{parsed_response}=\n"
     elsif array[-1].to_i > array[-2].to_i
-      file.puts parsed_response + '⬈'
+      file.puts "#{parsed_response}⬈\n"
     else
-      file.puts parsed_response + '⬊'
+      file.puts "#{parsed_response}⬊\n"
     end
   end
 
